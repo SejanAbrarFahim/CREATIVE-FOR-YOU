@@ -20,6 +20,6 @@
     }
 
     .btn{
-        @apply  border rounded-full md:ml-10  px-2 md:px-3 md:py-1 text-xl md:text-3xl ;
+        @apply  border rounded-full md:ml-10  px-2 md:px-3 md:py-1 text-xl md:text-3xl cursor-pointer ;
     }
 }

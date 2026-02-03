@@ -10,7 +10,6 @@
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
-    --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-gray-800: oklch(27.8% 0.033 256.848);
@@ -301,6 +300,9 @@
   .mt-50 {
     margin-top: calc(var(--spacing) * 50);
   }
+  .mr-0 {
+    margin-right: calc(var(--spacing) * 0);
+  }
   .mr-3 {
     margin-right: calc(var(--spacing) * 3);
   }
@@ -336,6 +338,9 @@
   }
   .ml-9 {
     margin-left: calc(var(--spacing) * 9);
+  }
+  .ml-10 {
+    margin-left: calc(var(--spacing) * 10);
   }
   .ml-20 {
     margin-left: calc(var(--spacing) * 20);
@@ -627,6 +632,10 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .duration-300 {
+    --tw-duration: 300ms;
+    transition-duration: 300ms;
+  }
   .duration-400 {
     --tw-duration: 400ms;
     transition-duration: 400ms;
@@ -661,6 +670,16 @@
       @media (hover: hover) {
         background-color: #00FF84;
       }
+    }
+  }
+  .sm\:ml-5 {
+    @media (width >= 40rem) {
+      margin-left: calc(var(--spacing) * 5);
+    }
+  }
+  .sm\:ml-10 {
+    @media (width >= 40rem) {
+      margin-left: calc(var(--spacing) * 10);
     }
   }
   .md\:col-span-6 {
@@ -726,6 +745,11 @@
   .md\:mb-0 {
     @media (width >= 48rem) {
       margin-bottom: calc(var(--spacing) * 0);
+    }
+  }
+  .md\:ml-0 {
+    @media (width >= 48rem) {
+      margin-left: calc(var(--spacing) * 0);
     }
   }
   .md\:ml-10 {
@@ -898,6 +922,16 @@
       margin-top: calc(var(--spacing) * 40);
     }
   }
+  .lg\:mr-9 {
+    @media (width >= 64rem) {
+      margin-right: calc(var(--spacing) * 9);
+    }
+  }
+  .lg\:mr-10 {
+    @media (width >= 64rem) {
+      margin-right: calc(var(--spacing) * 10);
+    }
+  }
   .lg\:mb-8 {
     @media (width >= 64rem) {
       margin-bottom: calc(var(--spacing) * 8);
@@ -975,6 +1009,11 @@
   .xl\:col-span-9 {
     @media (width >= 80rem) {
       grid-column: span 9 / span 9;
+    }
+  }
+  .xl\:mr-10 {
+    @media (width >= 80rem) {
+      margin-right: calc(var(--spacing) * 10);
     }
   }
   .xl\:mr-27 {
@@ -1101,6 +1140,7 @@
     }
   }
   .btn {
+    cursor: pointer;
     border-radius: calc(infinity * 1px);
     border-style: var(--tw-border-style);
     border-width: 1px;
