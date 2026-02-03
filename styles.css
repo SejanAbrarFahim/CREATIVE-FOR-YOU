@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@theme{
+    --font-plus:"Plus Jakarta Sans", sans-serif;
+}
+
+
+@layer utilities{
+    .nav{
+        @apply transition-all hover:scale-105 hover:border-b decoration-2 hover:text-[#f44335] border-[#F44335] duration-300 ease-in-out ;
+    }
+    .cont{
+        @apply flex flex-col justify-center items-center text-xs md:text-xl lg:text-2xl font-semibold ;
+    }
+
+    .btn{
+        @apply  border rounded-full md:ml-10  px-2 md:px-3 md:py-1 text-xl md:text-3xl ;
+    }
+}
